@@ -34,20 +34,25 @@
             // });
 
             $('.nav_item').click(function(){
-                var tabList_id = $(this).attr('data-menu');
+                console.log("Nav item clicked");
+                var tabList_id = $(this).attr('data-tab2');
                 var scrollPosition;
+
+                console.log("Tab list ID: " + tabList_id)
 
                 if (tabList_id === "tab_list01") {
                     scrollPosition = 0;
                 } else if (tabList_id === "tab_list02") {
-                    scrollPosition = 569; // 예시 값, 필요에 따라 변경
+                    scrollPosition = 200; // 예시 값, 필요에 따라 변경
                 } else if (tabList_id === "tab_list03") {
-                    scrollPosition = 1236; // 예시 값, 필요에 따라 변경
+                    scrollPosition = 900; // 예시 값, 필요에 따라 변경
                 }
 
-                $('html, body').animate({
-                    scrollTop: scrollPosition
-                }, 500);
+                console.log("Scroll position: " + scrollPosition);
+
+                // $('html, body').animate({
+                //     scrollTop: scrollPosition
+                // }, 500);
             });
         });
     </script>
@@ -80,30 +85,30 @@
 
                     <div class="nav_tab_list_box">
                         <div class="nav_list" id="tab-1">
-                            <div class="nav_item on" data-menu="tab_list">
+                            <div class="nav_item on" data-tab1="tab_list01">
                                 <a href="#">메뉴1</a>
                             </div><!-- nav_item -->
-                            <div class="nav_item" data-menu="tab_list">
+                            <div class="nav_item" data-tab1="tab_list02">
                                 <a href="#">메뉴2</a>
                             </div><!-- nav_item -->
-                            <div class="nav_item" data-menu="tab_list">
+                            <div class="nav_item" data-tab1="tab_list03">
                                 <a href="#">메뉴3</a>
                             </div><!-- nav_item -->
                             <div class="review"></div>
                         </div><!-- nav_list -->
     
                         <div class="nav_list on" id="tab-2">
-                            <div class="nav_item on" data-menu="tab_list01">
-                                <a href="#">베스트 리뷰</a>
+                            <div class="nav_item on" data-tab2="tab_list01">
+                                <p>베스트 리뷰</p>
                             </div><!-- nav_item -->
-                            <div class="nav_item" data-menu="tab_list02">
-                                <a href="#">도서 리뷰 리스트</a>
+                            <div class="nav_item" data-tab2="tab_list02">
+                                <p>도서 리뷰 리스트</p>
                             </div><!-- nav_item -->
-                            <div class="nav_item arrow" data-menu="tab_list03">
-                                <a href="#">
+                            <div class="nav_item arrow" data-tab2="tab_list03">
+                                <p>
                                     <img src="img/down_btn.png" alt="">
                                     직무별 카테고리
-                                </a>
+                                </p>
                             </div><!-- nav_item -->
                             <div class="review"></div>
                         </div><!-- nav_list -->
@@ -149,7 +154,7 @@
                     </div>
                 </div><!-- search_header -->
 
-                <div class="best_review" id="tab_list01">
+                <div id="tab_list01" class="best_review">
                     <h1>마상소프트 베스트 리뷰</h1>
                     <p>최근 한 달간 도서리뷰가 많이 작성된 순서입니다.</p>
 
@@ -400,7 +405,7 @@
                     </div><!-- swiper -->
                 </div><!-- best_review -->
 
-                <div class="review_list" id="tab_list02">
+                <div id="tab_list02" class="review_list">
                     <h1>도서 리뷰 리스트</h1>
                     <p>사내 직원들이 등록한 도서입니다.</p>
 
@@ -1045,7 +1050,7 @@
                     </div><!-- review_plus_icon -->
                 </div><!-- review_list -->
 
-                <div class="review_list" id="tab_list03">
+                <div id="tab_list03" class="review_list">
                     <h1>도서 리뷰 리스트</h1>
                     <p>사내 직원들이 등록한 도서입니다.</p>
 
