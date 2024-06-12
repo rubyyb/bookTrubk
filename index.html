@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Trunk</title>
+    <link rel="stylesheet" href="css/01.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="inner">
+                <!-- <h1>
+                    <a href="#MAIN">
+                        <img src="img/logo.png" alt="로고 변경 예정">
+                    </a>
+                </h1> -->
+
+                <div class="nav_tab">
+                    <ul class="nav_tab_header">
+                        <li>
+                            <img src="img/social_icon.png" alt="소셜 서재">
+                            <p>소셜서재</p>
+                        </li>
+                        <li class="on">
+                            <img src="img/masang_icon.png" alt="회사 서재">
+                            <p>회사서재</p>
+                        </li>
+                        <li>
+                            <img src="img/mylibrary_icon.png" alt="마이 서재">
+                            <p>마이서재</p>
+                        </li>
+                    </ul><!-- nav_tab_header -->
+
+                    <div class="nav_tab_list_box">
+                        <div class="nav_list">
+                            <div class="nav_item on">
+                                <a href="#">메뉴1</a>
+                            </div><!-- nav_item -->
+                            <div class="nav_item">
+                                <a href="#">메뉴2</a>
+                            </div><!-- nav_item -->
+                            <div class="nav_item">
+                                <a href="#">메뉴3</a>
+                            </div><!-- nav_item -->
+                            <div class="review"></div>
+                        </div><!-- nav_list -->
+    
+                        <div class="nav_list on">
+                            <div class="nav_item">
+                                <a href="#">베스트 리뷰</a>
+                            </div><!-- nav_item -->
+                            <div class="nav_item">
+                                <a href="#">도서 리뷰 리스트</a>
+                            </div><!-- nav_item -->
+                            <div class="nav_item arrow">
+                                <a href="#">
+                                    <img src="img/down_btn.png" alt="">
+                                    직무별 카테고리
+                                </a>
+                            </div><!-- nav_item -->
+                            <div class="review"></div>
+                        </div><!-- nav_list -->
+    
+                        <div class="nav_list">
+                            <div class="nav_item">
+                                <a href="#">메뉴1</a>
+                            </div><!-- nav_item -->
+                            <div class="nav_item">
+                                <a href="#">메뉴2</a>
+                            </div><!-- nav_item -->
+                            <div class="nav_item">
+                                <a href="#">메뉴3</a>
+                            </div><!-- nav_item -->
+                            <div class="review"></div>
+                        </div><!-- nav_list -->
+                    </div><!-- nav_tab_list_box -->
+                </div><!-- nav_tab -->
+
+                <div class="user"></div>
+            </div><!-- inner -->
+        </header><!-- header -->
+
+     <!--    <section id="cont01" class="cont01">
+            <p>디자인 제작 중입니다</p>
+        </section> --><!-- cont01 -->
+        
+        <section id="cont02" class="cont01 on">
+            <div class="cont_inner">
+                <div class="search_header">
+                    <img src="img/search_icon.png" alt="검색">
+                    <input type="search" placeholder="키워드를 입력하세요.">
+                </div><!-- search_header -->
+
+                <div class="best_review">
+                    <h1>마상소프트 베스트 리뷰</h1>
+                    <p>최근 한 달간 도서리뷰가 많이 작성된 순서입니다.</p>
+
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="best_slide_item">
+                                    <a href="#">
+                                        <div class="book_img">
+                                            <p class="good_best">1</p>
+                                            <img src="img/book_img.jpg" alt="책">
+                                        </div><!-- book_img -->
+            
+                                        <div class="book_text">
+                                            <p>오늘도 나는 집으로 간다</p>
+                                            <p>나태주</p>
+            
+                                            <div class="book_mark">
+                                                <img src="img/bookmark_icon.png" alt="북마크">
+                                            </div><!-- book_mark -->
+                                        </div><!-- book_text -->
+                                    </a>
+                                </div><!-- best_slide_item -->
+                            </div><!-- swiper-slide -->
+
+                            <div class="swiper-slide">
+                                <div class="best_slide_item">
+                                    <a href="#">
+                                        <div class="book_img">
+                                            <p class="good_best">2</p>
+                                            <img src="img/book_img02.jpg" alt="책">
+                                        </div><!-- book_img -->
+            
+                                        <div class="book_text">
+                                            <p>도시락 만들기</p>
+                                            <p>비야도시락(이슬비)</p>
+            
+                                            <div class="book_mark">
+                                                <img src="img/bookmark_icon.png" alt="북마크">
+                                            </div><!-- book_mark -->
+                                        </div><!-- book_text -->
+                                    </a>
+                                </div><!-- best_slide_item -->
+                            </div><!-- swiper-slide -->
+            
+                            <div class="swiper-slide">
+                                <div class="best_slide_item">
+                                    <a href="#">
+                                        <div class="book_img">
+                                            <p class="good_best">3</p>
+                                            <img src="img/book_img.jpg" alt="책">
+                                        </div><!-- book_img -->
+            
+                                        <div class="book_text">
+                                            <p>오늘도 나는 집으로 간다</p>
+                                            <p>나태주</p>
+            
+                                            <div class="book_mark">
+                                                <img src="img/bookmark_icon.png" alt="북마크">
+                                            </div><!-- book_mark -->
+                                        </div><!-- book_text -->
+                                    </a>
+                                </div><!-- best_slide_item -->
+                            </div><!-- swiper-slide -->
+
+                            <div class="swiper-slide">
+                                <div class="best_slide_item">
+                                    <a href="#">
+                                        <div class="book_img">
+                                            <p>4</p>
+                                            <img src="img/book_img02.jpg" alt="책">
+                                        </div><!-- book_img -->
+            
+                                        <div class="book_text">
+                                            <p>도시락 만들기</p>
+                                            <p>비야도시락(이슬비)</p>
+            
+                                            <div class="book_mark">
+                                                <img src="img/bookmark_icon.png" alt="북마크">
+                                            </div><!-- book_mark -->
+                                        </div><!-- book_text -->
+                                    </a>
+                                </div><!-- best_slide_item -->
+                            </div><!-- swiper-slide -->
+            
+                            <div class="swiper-slide">
+                                <div class="best_slide_item">
+                                    <a href="#">
+                                        <div class="book_img">
+                                            <p>5</p>
+                                            <img src="img/book_img.jpg" alt="책">
+                                        </div><!-- book_img -->
+            
+                                        <div class="book_text">
+                                            <p>오늘도 나는 집으로 간다</p>
+                                            <p>나태주</p>
+            
+                                            <div class="book_mark">
+                                                <img src="img/bookmark_icon.png" alt="북마크">
+                                            </div><!-- book_mark -->
+                                        </div><!-- book_text -->
+                                    </a>
+                                </div><!-- best_slide_item -->
+                            </div><!-- swiper-slide -->
+
+                            <div class="swiper-slide">
+                                <div class="best_slide_item">
+                                    <a href="#">
+                                        <div class="book_img">
+                                            <p>6</p>
+                                            <img src="img/book_img02.jpg" alt="책">
+                                        </div><!-- book_img -->
+            
+                                        <div class="book_text">
+                                            <p>도시락 만들기</p>
+                                            <p>비야도시락(이슬비)</p>
+            
+                                            <div class="book_mark">
+                                                <img src="img/bookmark_icon.png" alt="북마크">
+                                            </div><!-- book_mark -->
+                                        </div><!-- book_text -->
+                                    </a>
+                                </div><!-- best_slide_item -->
+                            </div><!-- swiper-slide -->
+            
+                            <div class="swiper-slide">
+                                <div class="best_slide_item">
+                                    <a href="#">
+                                        <div class="book_img">
+                                            <p>7</p>
+                                            <img src="img/book_img.jpg" alt="책">
+                                        </div><!-- book_img -->
+            
+                                        <div class="book_text">
+                                            <p>오늘도 나는 집으로 간다</p>
+                                            <p>나태주</p>
+            
+                                            <div class="book_mark">
+                                                <img src="img/bookmark_icon.png" alt="북마크">
+                                            </div><!-- book_mark -->
+                                        </div><!-- book_text -->
+                                    </a>
+                                </div><!-- best_slide_item -->
+                            </div><!-- swiper-slide -->
+
+                            <div class="swiper-slide">
+                                <div class="best_slide_item">
+                                    <a href="#">
+                                        <div class="book_img">
+                                            <p>8</p>
+                                            <img src="img/book_img02.jpg" alt="책">
+                                        </div><!-- book_img -->
+            
+                                        <div class="book_text">
+                                            <p>도시락 만들기</p>
+                                            <p>비야도시락(이슬비)</p>
+            
+                                            <div class="book_mark">
+                                                <img src="img/bookmark_icon.png" alt="북마크">
+                                            </div><!-- book_mark -->
+                                        </div><!-- book_text -->
+                                    </a>
+                                </div><!-- best_slide_item -->
+                            </div><!-- swiper-slide -->
+            
+                            <div class="swiper-slide">
+                                <div class="best_slide_item">
+                                    <a href="#">
+                                        <div class="book_img">
+                                            <p>9</p>
+                                            <img src="img/book_img.jpg" alt="책">
+                                        </div><!-- book_img -->
+            
+                                        <div class="book_text">
+                                            <p>오늘도 나는 집으로 간다</p>
+                                            <p>나태주</p>
+            
+                                            <div class="book_mark">
+                                                <img src="img/bookmark_icon.png" alt="북마크">
+                                            </div><!-- book_mark -->
+                                        </div><!-- book_text -->
+                                    </a>
+                                </div><!-- best_slide_item -->
+                            </div><!-- swiper-slide -->
+
+                            <div class="swiper-slide">
+                                <div class="best_slide_item">
+                                    <a href="#">
+                                        <div class="book_img">
+                                            <p>10</p>
+                                            <img src="img/book_img02.jpg" alt="책">
+                                        </div><!-- book_img -->
+            
+                                        <div class="book_text">
+                                            <p>도시락 만들기</p>
+                                            <p>비야도시락(이슬비)</p>
+            
+                                            <div class="book_mark">
+                                                <img src="img/bookmark_icon.png" alt="북마크">
+                                            </div><!-- book_mark -->
+                                        </div><!-- book_text -->
+                                    </a>
+                                </div><!-- best_slide_item -->
+                            </div><!-- swiper-slide -->
+            
+                            <div class="swiper-slide">
+                                <div class="best_slide_item">
+                                    <a href="#">
+                                        <div class="book_img">
+                                            <p>11</p>
+                                            <img src="img/book_img.jpg" alt="책">
+                                        </div><!-- book_img -->
+            
+                                        <div class="book_text">
+                                            <p>오늘도 나는 집으로 간다</p>
+                                            <p>나태주</p>
+            
+                                            <div class="book_mark">
+                                                <img src="img/bookmark_icon.png" alt="북마크">
+                                            </div><!-- book_mark -->
+                                        </div><!-- book_text -->
+                                    </a>
+                                </div><!-- best_slide_item -->
+                            </div><!-- swiper-slide -->
+
+                            <div class="swiper-slide">
+                                <div class="best_slide_item">
+                                    <a href="#">
+                                        <div class="book_img">
+                                            <p>12</p>
+                                            <img src="img/book_img02.jpg" alt="책">
+                                        </div><!-- book_img -->
+            
+                                        <div class="book_text">
+                                            <p>도시락 만들기</p>
+                                            <p>비야도시락(이슬비)</p>
+            
+                                            <div class="book_mark">
+                                                <img src="img/bookmark_icon.png" alt="북마크">
+                                            </div><!-- book_mark -->
+                                        </div><!-- book_text -->
+                                    </a>
+                                </div><!-- best_slide_item -->
+                            </div><!-- swiper-slide -->
+                        </div><!-- swiper-wrapper -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div><!-- swiper -->
+                </div><!-- best_review -->
+
+                <div class="review_list">
+                    <h1>도서 리뷰 리스트</h1>
+                    <p>사내 직원들이 등록한 도서입니다.</p>
+
+                    <div class="review_list_tab">
+                        <ul>
+                            <li class="on">최근등록순</li>
+                            <li>오래된순</li>
+                            <li>추천리뷰순</li>
+                        </ul>
+                    </div><!-- review_list_tab -->
+
+                    <div class="review_list_menu">
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/book_img.jpg" alt="책 이미지">
+
+                                <div class="review_tab_text">
+                                    <div class="tab_user">
+                                        <img src="img/logo.png" alt="유저이미지">
+                                    </div><!-- tab_user -->
+
+                                    <div class="text">
+                                        <p>홍길동</p>
+                                        <p>홍길동팀</p>
+                                    </div><!-- text -->
+                                </div><!-- review_tab_text -->
+                            </a>
+                        </div><!-- item -->
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/book_img02.jpg" alt="책 이미지">
+
+                                <div class="review_tab_text">
+                                    <div class="tab_user">
+                                        <img src="img/logo.png" alt="유저이미지">
+                                    </div><!-- tab_user -->
+
+                                    <div class="text">
+                                        <p>홍길동</p>
+                                        <p>홍길동팀</p>
+                                    </div><!-- text -->
+                                </div><!-- review_tab_text -->
+                            </a>
+                        </div><!-- item -->
+                        
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/book_img.jpg" alt="책 이미지">
+
+                                <div class="review_tab_text">
+                                    <div class="tab_user">
+                                        <img src="img/logo.png" alt="유저이미지">
+                                    </div><!-- tab_user -->
+
+                                    <div class="text">
+                                        <p>홍길동</p>
+                                        <p>홍길동팀</p>
+                                    </div><!-- text -->
+                                </div><!-- review_tab_text -->
+                            </a>
+                        </div><!-- item -->
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/book_img02.jpg" alt="책 이미지">
+
+                                <div class="review_tab_text">
+                                    <div class="tab_user">
+                                        <img src="img/logo.png" alt="유저이미지">
+                                    </div><!-- tab_user -->
+
+                                    <div class="text">
+                                        <p>홍길동</p>
+                                        <p>홍길동팀</p>
+                                    </div><!-- text -->
+                                </div><!-- review_tab_text -->
+                            </a>
+                        </div><!-- item -->
+                        
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/book_img.jpg" alt="책 이미지">
+
+                                <div class="review_tab_text">
+                                    <div class="tab_user">
+                                        <img src="img/logo.png" alt="유저이미지">
+                                    </div><!-- tab_user -->
+
+                                    <div class="text">
+                                        <p>홍길동</p>
+                                        <p>홍길동팀</p>
+                                    </div><!-- text -->
+                                </div><!-- review_tab_text -->
+                            </a>
+                        </div><!-- item -->
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/book_img02.jpg" alt="책 이미지">
+
+                                <div class="review_tab_text">
+                                    <div class="tab_user">
+                                        <img src="img/logo.png" alt="유저이미지">
+                                    </div><!-- tab_user -->
+
+                                    <div class="text">
+                                        <p>홍길동</p>
+                                        <p>홍길동팀</p>
+                                    </div><!-- text -->
+                                </div><!-- review_tab_text -->
+                            </a>
+                        </div><!-- item -->
+                        
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/book_img.jpg" alt="책 이미지">
+
+                                <div class="review_tab_text">
+                                    <div class="tab_user">
+                                        <img src="img/logo.png" alt="유저이미지">
+                                    </div><!-- tab_user -->
+
+                                    <div class="text">
+                                        <p>홍길동</p>
+                                        <p>홍길동팀</p>
+                                    </div><!-- text -->
+                                </div><!-- review_tab_text -->
+                            </a>
+                        </div><!-- item -->
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/book_img02.jpg" alt="책 이미지">
+
+                                <div class="review_tab_text">
+                                    <div class="tab_user">
+                                        <img src="img/logo.png" alt="유저이미지">
+                                    </div><!-- tab_user -->
+
+                                    <div class="text">
+                                        <p>홍길동</p>
+                                        <p>홍길동팀</p>
+                                    </div><!-- text -->
+                                </div><!-- review_tab_text -->
+                            </a>
+                        </div><!-- item -->
+                        
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/book_img.jpg" alt="책 이미지">
+
+                                <div class="review_tab_text">
+                                    <div class="tab_user">
+                                        <img src="img/logo.png" alt="유저이미지">
+                                    </div><!-- tab_user -->
+
+                                    <div class="text">
+                                        <p>홍길동</p>
+                                        <p>홍길동팀</p>
+                                    </div><!-- text -->
+                                </div><!-- review_tab_text -->
+                            </a>
+                        </div><!-- item -->
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/book_img02.jpg" alt="책 이미지">
+
+                                <div class="review_tab_text">
+                                    <div class="tab_user">
+                                        <img src="img/logo.png" alt="유저이미지">
+                                    </div><!-- tab_user -->
+
+                                    <div class="text">
+                                        <p>홍길동</p>
+                                        <p>홍길동팀</p>
+                                    </div><!-- text -->
+                                </div><!-- review_tab_text -->
+                            </a>
+                        </div><!-- item -->
+                        
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/book_img.jpg" alt="책 이미지">
+
+                                <div class="review_tab_text">
+                                    <div class="tab_user">
+                                        <img src="img/logo.png" alt="유저이미지">
+                                    </div><!-- tab_user -->
+
+                                    <div class="text">
+                                        <p>홍길동</p>
+                                        <p>홍길동팀</p>
+                                    </div><!-- text -->
+                                </div><!-- review_tab_text -->
+                            </a>
+                        </div><!-- item -->
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/book_img02.jpg" alt="책 이미지">
+
+                                <div class="review_tab_text">
+                                    <div class="tab_user">
+                                        <img src="img/logo.png" alt="유저이미지">
+                                    </div><!-- tab_user -->
+
+                                    <div class="text">
+                                        <p>홍길동</p>
+                                        <p>홍길동팀</p>
+                                    </div><!-- text -->
+                                </div><!-- review_tab_text -->
+                            </a>
+                        </div><!-- item -->
+                    </div><!-- review_list_menu -->
+                </div><!-- review_list -->
+            </div><!-- cont_inner -->
+        </section><!-- cont01 -->
+
+<!--         <section id="cont03" class="cont01">
+            <p>디자인 제작 중입니다</p>
+        </section> --><!-- cont01 -->
+    </div><!-- #wrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 6,
+            spaceBetween: 40,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>
