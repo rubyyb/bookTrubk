@@ -382,7 +382,7 @@ button {
 }
 .review_list_box .item .book_itme #book_title > div {
     position: relative; /* 상대 위치 설정 */
-    line-height: 1.6; /* 행간을 넓히기 위해 line-height 설정 */
+    line-height: 1.4; /* 행간을 넓히기 위해 line-height 설정 */
     margin-bottom: 20px;
     overflow: hidden; /* 초과된 부분을 숨김 */
     -webkit-line-clamp: 5; /* 높이를 기준으로 줄수를 5개로 제한 */
