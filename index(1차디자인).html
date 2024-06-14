@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Trunk</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <link rel="stylesheet" href="css/02.css">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="css/01.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -15,16 +15,35 @@
         $(function(){
             // gnb1차 tab menu
             $('.nav_tab_list').click(function(){
-                var tab_id = $(this).data('tab');
-                var container_id = $(this).data('list');
+                var tab_id = $(this).attr('data-tab');
 
                 $('.nav_tab_list').removeClass('on');
                 $('.nav_list').removeClass('on');
-                $('.cont01').removeClass('on');
 
                 $(this).addClass('on');
                 $("#" + tab_id).addClass('on');
-                $("#" + container_id).addClass('on');
+            });
+
+            // // gnb2차 영역 표시 탭
+            // $('.nav_tab_list').click(function(){
+            //     var tab_id = $(this).attr('data-tab');
+
+            //     $('.nav_tab_list').removeClass('on');
+            //     $('.nav_list').removeClass('on');
+
+            //     $(this).addClass('on');
+            //     $("#" + tab_id).addClass('on');
+            // });
+
+            // 회사서재 도서리뷰 리스트 탭메뉴
+            var elTabs = jQuery('#tabs li');
+            var elTabcontent = jQuery('.review_list_menu');
+            elTabs.on('click', function() {
+                var activeTab = jQuery(this).attr('data-reviewtab');
+                elTabs.removeClass('on');
+                elTabcontent.removeClass('on');
+                jQuery(this).addClass('on');
+                jQuery('#' + activeTab).addClass('on');
             });
 
             // 탭메뉴에 맞는 섹션으로 가기
