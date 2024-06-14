@@ -1,10 +1,14 @@
 @charset "utf-8";
 
 @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
+    font-family: 'Nanum Gothic';
     font-style: normal;
+    font-weight: 400;
+    src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot);
+    src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+        url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff2) format('woff2'),
+        url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff) format('woff'),
+        url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.ttf) format('truetype');
 }
 
 *{
@@ -22,7 +26,7 @@ a {
 body {
     color: #1D1D1B;
     line-height: 1;
-    font-family: 'Pretendard-Regular';
+    font-family: 'Nanum Gothic';
 }
 button {
     background-color: transparent;
@@ -54,7 +58,7 @@ button {
     cursor: pointer;
 }
 #header .header_inner .pc_nav .pc_gnb {
-    width: 529px;
+    width: 543px;
     font-size: 18px;
     display: flex;
     justify-content: space-between;
@@ -79,7 +83,7 @@ button {
 /* 👍👍👍검색창 / 탭메뉴👍👍👍 */
 #input_tab02 {
     width: 100%;
-    height: 208px;
+    height: 168px;
 }
 #input_tab02 .input {
     width: 690px;
@@ -129,125 +133,123 @@ button {
     z-index: 1000; /* 필요 시 z-index 값 조정 */
 }
 
-
-/* 💥💥💥💥💥수정해야해!!!💥💥💥💥💥 */
 .cont01 {
     width: 100%;
-    height: auto;
+    height: 1920px;
+    background-color: #F5F5F7;
 }
-.cont01 .best_review {
-    margin-top: 80px;
-}
-.cont01 .best_review h1 {
+.cont01 .cont_inner .best_review > h1 {
+    padding-top: 70px;
     font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 3px;
+    margin-bottom: 8px;
 }
-.cont01 .best_review > p {
-    font-size: 12px;
-    color: #666666;
-    margin-bottom: 16px;
-}
-.best_slide_item {
-    width: 180px;
-    height: 297px;
-}
-.best_slide_item .book_img {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    cursor: pointer;
-}
-.best_slide_item .book_img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
-}
-.best_slide_item .book_img p {
-    width: 48px;
-    height: 48px;
-    clip-path: polygon(0 0, 0% 100%, 100% 0);
-    background-color: #73473B;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    padding-left: 9px;
-    padding-top: 4px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 10px 0;
-}
-.best_slide_item .book_img p.good_best {
-    background-color: #FA5252;
-}
-.best_slide_item .book_text {
-    padding-left: 8px;
-    margin-top: 12px;
-    width: 128px;
-}
-.best_slide_item .book_text p:first-child {
-    font-weight: bold;
-    margin-bottom: 7px;
-    color: #000;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-.best_slide_item .book_text p:nth-child(2) {
+.cont01 .cont_inner .best_review > p {
     font-size: 12px;
     color: #666;
+    margin-bottom: 8px;
 }
-.best_slide_item .book_text .book_mark {
-    width: 34px;
-    height: 34px;
+.cont_inner {
+    max-width: 1280px;
+    width: calc(100% - 10px);
+    margin: 0 auto;
+}
+.swiper-horizontal {
+    height: 483px;
+}
+.swiper-slide {
+    width: 200px;
+    height: 355px;
+    position: relative;
+    margin-top: 30px;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+.swiper-slide, .swiper-slide-prev, .swiper-slide-next {
+    transform: scale(0.9);
+    transition: all 0.5s;
+}
+.swiper-slide-active {
+    transform: scale(1);
+    transition: all 0.5s;
+}
+.swiper-slide .number {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #0EAB94;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    bottom: 7px;
-    right: 0;
-    cursor: pointer;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    border: 3px solid #0EAB94;
+    font-weight: bold;
 }
-.best_slide_item .book_text .book_mark img {
+.swiper-slide img {
     width: 100%;
-    height: 100%;
+    height: 317px;
     object-fit: cover;
+    border-radius: 10px;
 }
-.swiper {
-    overflow: visible !important;
+.swiper-slide .text {
+    width: 100%;
+    height: 49px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 8px;
 }
-.swiper-wrapper {
-    overflow: hidden;
+.swiper-slide .text h1 {
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+.swiper-slide .text p {
+    font-size: 14px;
+    color: #666;
+    margin: 0 auto;
 }
 .swiper-button-next {
-    width: 50px !important;
-    height: 50px !important;
-    right: -14px !important;
+    width: 40px !important;
+    height: 40px !important;
     background: url('../img/best_slide_right.png') center center / cover no-repeat;
+    right: 50% !important;
+    margin-right: -58px;
 }
 .swiper-button-next:after, .swiper-button-prev:after {
     display: none;
 }
 .swiper-button-prev {
-    width: 50px !important;
-    height: 50px !important;
-    left: -14px !important;
+    width: 40px !important;
+    height: 40px !important;
     background: url('../img/best_slide_left.png') center center / cover no-repeat;
+    left: 50% !important;
+    margin-left: -58px;
+}
+.swiper-button-next, .swiper-button-prev {
+    bottom: 0 !important;
+    top: auto !important;
 }
 
-
+/* ✌️✌️✌️두번째 섹션✌️✌️✌️ */
 .review_list {
-    margin-top: 59px;
+    margin-top: 70px;
 }
 .review_list > h1 {
     font-size: 28px;
     font-weight: bold;
-    margin-bottom: 3px;
+    margin-bottom: 8px;
 }
 .review_list > p {
     font-size: 12px;
     color: #666;
-    margin-bottom: 11px;
+    margin-bottom: 30px;
 }
 .review_list .review_list_tab {
     display: flex;
@@ -258,13 +260,13 @@ button {
     justify-content: flex-start;
 }
 .review_list .review_list_tab ul li {
-    height: 37px;
-    line-height: 37px;
+    height: 44px;
+    line-height: 44px;
     padding: 0 22px;
-    border: 1px solid #666;
     color: #666;
+    background-color: #eee;
     border-radius: 30px;
-    margin-left: 8px;
+    margin-left: 6px;
     margin-bottom: 30px;
     cursor: pointer;
 }
@@ -272,8 +274,7 @@ button {
     margin-left: 0;
 }
 .review_list .review_list_tab ul li.on {
-    background-color: #56BB9F;
-    border: 1px solid #56BB9F;
+    background-color: #57D18F;
     color: #fff;
     font-weight: bold;
 }
@@ -287,67 +288,122 @@ button {
     height: 100%;
     object-fit: cover;
 }
-.review_list .review_list_menu {
-    display: none;
-}
-.review_list .review_list_menu.on {
-    display: block;
-}
-.review_list .review_list_menu > div {
+
+.review_list_box {
+    width: calc(100% / 3);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 30;
 }
-.review_list .review_list_menu .item {
-    width: 180px;
-    height: 306px;
-}
-.review_list .review_list_menu .item img {
+.review_list_box .item {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: 247px;
     border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
 }
-.review_list .review_list_menu .item .review_tab_text {
+.review_list_box .item .item_header {
+    height: 64px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 24px;
+}
+.review_list_box .item .item_header > div {
     display: flex;
     justify-content: flex-start;
-    margin-top: 8px;
+    align-items: center;
 }
-.review_list .review_list_menu .item .review_tab_text .tab_user {
-    margin-right: 6px;
-}
-.review_list .review_list_menu .item .review_tab_text .tab_user img {
-    width: 48px;
-    height: 48px;
+.review_list_box .item .item_header .item_header_user {
+    width: 42px;
+    height: 42px;
     object-fit: cover;
     border-radius: 50%;
+    margin-right: 8px;
 }
-.review_list .review_list_menu .item .review_tab_text .text {
-    margin-top: 8px;
+.review_list_box .item .item_header .name_text {
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.review_list .review_list_menu .item .review_tab_text .text p:first-child {
+.review_list_box .item .item_header .name_text h2 {
     font-size: 16px;
-    font-weight: bolder;
-    color: #000;
-    margin-bottom: 3px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
-.review_list .review_list_menu .item .review_tab_text .text p:last-child {
-    font-size: 14px;
+.review_list_box .item .item_header .name_text > p {
+    font-size: 12px;
     color: #666;
 }
-.review_list .review_plus_icon a {
-    width: 183px;
-    height: 50px;
-    background: url('../img/review_plus_icon.png') center center / cover no-repeat;
+.review_list_box .item .item_header .heart {
+    position: absolute;
+    bottom: 10px;
+    right: 32px;
+}
+.review_list_box .item .item_header .heart img {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+    margin-right: 2px;
+}
+.review_list_box .item .item_header .heart p {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
     display: flex;
     justify-content: center;
-    margin: 0 auto;
-    margin-top: 40px;
-    margin-bottom: 200px;
+    align-items: center;
 }
-.review_list .review_plus_icon a:hover {
-    width: 183px;
-    height: 50px;
-    background: url('../img/review_plus_icon_hover.png') center center / cover no-repeat;
+.review_list_box .item .book_itme {
+    padding: 15px 27px 24px 28px;
+    display: flex;
+    justify-content: space-between;
+}
+.review_list_box .item .book_itme #book_title {
+    width: 215px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+.review_list_box .item .book_itme #book_title h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 11px;
+    margin-bottom: 17px;
+}
+.review_list_box .item .book_itme #book_title p {
+    height: 90px;
+    font-size: 13px;
+    color: #666;
+}
+.review_list_box .item .book_itme #book_title > div {
+    position: relative; /* 상대 위치 설정 */
+    line-height: 1.6; /* 행간을 넓히기 위해 line-height 설정 */
+    margin-bottom: 20px;
+    overflow: hidden; /* 초과된 부분을 숨김 */
+    -webkit-line-clamp: 5; /* 높이를 기준으로 줄수를 5개로 제한 */
+    -webkit-box-orient: vertical; /* 세로 방향으로 */
+    display: -webkit-box; 
+}
+.more-btn {
+    position: absolute; /* 절대 위치 설정 */
+    bottom: 0; /* 하단에 배치 */
+    right: 0; /* 오른쪽에 배치 */
+    color: #aaa;
+    cursor: pointer;
+}
+.show-more .more-btn {
+    display: none; /* 추가 텍스트가 없을 때는 숨김 */
+}
+
+.review_list_box .item .book_itme .book_img img {
+    width: 104px;
+    height: 144px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
