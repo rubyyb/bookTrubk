@@ -142,6 +142,9 @@ button {
     padding-top: 70px;
     font-size: 28px;
     margin-bottom: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 .cont01 .cont_inner .best_review > p {
     font-size: 12px;
@@ -245,6 +248,9 @@ button {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 .review_list > p {
     font-size: 12px;
@@ -290,14 +296,24 @@ button {
 }
 
 .review_list_box {
-    width: calc(100% / 3);
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30;
+    flex-direction: row;
+    gap: 30px;
+    display: none;
+}
+.review_list_box.on {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
 }
 .review_list_box .item {
-    width: 100%;
+    width: calc(100% / 3 - 30px);
     height: 247px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -381,23 +397,23 @@ button {
     color: #666;
 }
 .review_list_box .item .book_itme #book_title > div {
-    position: relative; /* 상대 위치 설정 */
-    line-height: 1.4; /* 행간을 넓히기 위해 line-height 설정 */
+    position: relative; 
+    line-height: 1.4; 
     margin-bottom: 20px;
-    overflow: hidden; /* 초과된 부분을 숨김 */
-    -webkit-line-clamp: 5; /* 높이를 기준으로 줄수를 5개로 제한 */
-    -webkit-box-orient: vertical; /* 세로 방향으로 */
+    overflow: hidden; 
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical
     display: -webkit-box; 
 }
 .more-btn {
-    position: absolute; /* 절대 위치 설정 */
-    bottom: 0; /* 하단에 배치 */
-    right: 0; /* 오른쪽에 배치 */
+    position: absolute;
+    bottom: 0;
+    right: 0;
     color: #aaa;
     cursor: pointer;
 }
 .show-more .more-btn {
-    display: none; /* 추가 텍스트가 없을 때는 숨김 */
+    display: none;
 }
 
 .review_list_box .item .book_itme .book_img img {
@@ -406,4 +422,38 @@ button {
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.plus_icon {
+    display: flex;
+    justify-content: center;
+}
+.plus_icon a {
+    width: 177px;
+    height: 60px;
+    background-color: #ddd;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+
+/* 🤞🤞🤞세번째🤞🤞🤞 */
+.team_category {
+    margin-top: 70px;
+}
+.team_category > h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.team_category > p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
 }
