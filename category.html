@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>직무별 카테고리</title>
+    <title>개인깃허브(카테고리)</title>
     <link rel="stylesheet" href="css/category.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var elBtnTop = jQuery(".top_btn");
+            elBtnTop.click(function() {
+                jQuery("html, body").animate({
+                    scrollTop: 0
+                });
+                return false;
+            });
+        })
+    </script>
 </head>
 <body>
     <div id="wrap">
@@ -72,12 +83,12 @@
 
         <div class="top_btn">
             <a href="#">
-                <img src="img/top_btn.png" alt="">
+                <img src="img/top_btn.png" alt="탑버튼">
             </a>
         </div><!-- top_btn -->
         <div class="writing_icon">
             <a href="#">
-                <img src="img/writing_icon.png" alt="">
+                <img src="img/writing_icon.png" alt="리뷰쓰기">
             </a>
         </div><!-- writing_icon -->
 

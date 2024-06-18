@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookTrunk</title>
+    <title>개인 깃허브</title>
     <link rel="stylesheet" href="css/2week.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -52,6 +52,20 @@
                 elTabcontent.removeClass('on');
                 jQuery(this).addClass('on');
                 jQuery('#' + activeTab).addClass('on');
+            });
+
+            // elTabs.on('click', function() {
+            //     jQuery("html, body").animate({
+            //         scrollTop : 950
+            //     }, 300);
+            // });
+
+            var elBtnTop = jQuery(".top_btn");
+            elBtnTop.click(function() {
+                jQuery("html, body").animate({
+                    scrollTop: 0
+                });
+                return false;
             });
 
             // // 더보기 버튼
