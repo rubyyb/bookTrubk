@@ -33,7 +33,6 @@ button {
     border: none;
 }
 
-/* .depth02 {display: none;} */
 /* 👍👍👍상단바👍👍👍 */
 #header {
     width: 100%;
@@ -187,337 +186,49 @@ button {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* 필요 시 z-index 값 조정 */
+    z-index: 1000;
 }
 
-/* 👍👍👍 마상소프트 베스트 리뷰 👍👍👍 */
-.cont01 {
+/* 👌👌👌탑버튼 / 글쓰기 버튼👌👌👌 */
+.top_btn {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 75px;
+    right: 120px;
+}
+.writing_icon {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 133px;
+    right: 120px;
+}
+
+/* 🤞🤞🤞 직무별 카테고리🤞🤞🤞 */
+.team_category {
     width: 100%;
     height: auto;
     background-color: #F5F5F7;
-}
-.cont01 .cont_inner .best_review > h1 {
-    font-weight: bold;
     padding-top: 70px;
-    font-size: 28px;
-    margin-bottom: 8px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.cont01 .cont_inner .best_review > p {
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 8px;
-    margin-left: 34px;
 }
 .cont_inner {
     max-width: 1280px;
     width: calc(100% - 10px);
     margin: 0 auto;
 }
-.swiper-horizontal {
-    height: 483px;
-}
-.swiper-slide {
-    width: 200px;
-    height: 355px;
-    position: relative;
-    margin-top: 30px;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-}
-.swiper-slide, .swiper-slide-prev, .swiper-slide-next {
-    transform: scale(0.9);
-    transition: all 0.5s;
-}
-.swiper-slide-active {
-    transform: scale(1);
-    transition: all 0.5s;
-}
-.swiper-slide .number {
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    color: #0EAB94;
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 22px;
-    border: 3px solid #0EAB94;
+.cont_inner > h1 {
     font-weight: bold;
-}
-.swiper-slide img {
-    width: 100%;
-    height: 317px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-.swiper-slide .text {
-    width: 100%;
-    height: 49px;
-    margin-top: 16px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 8px;
-}
-.swiper-slide .text h1 {
-    font-size: 17px;
-    font-weight: bold;
-    margin: 0 auto;
-}
-.swiper-slide .text p {
-    font-size: 14px;
-    color: #666;
-    margin: 0 auto;
-}
-.swiper-button-next {
-    width: 40px !important;
-    height: 40px !important;
-    background: url('../img/best_slide_right.png') center center / cover no-repeat;
-    right: 50% !important;
-    margin-right: -58px;
-}
-.swiper-button-next:after, .swiper-button-prev:after {
-    display: none;
-}
-.swiper-button-prev {
-    width: 40px !important;
-    height: 40px !important;
-    background: url('../img/best_slide_left.png') center center / cover no-repeat;
-    left: 50% !important;
-    margin-left: -58px;
-}
-.swiper-button-next, .swiper-button-prev {
-    bottom: 0 !important;
-    top: auto !important;
-}
-
-/* ✌️✌️✌️ 도서 리뷰 리스트 ✌️✌️✌️ */
-.review_list {
-    margin-top: 70px;
-}
-.review_list > h1 {
     font-size: 28px;
-    font-weight: bold;
     margin-bottom: 8px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-.review_list > p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 30px;
-    margin-left: 34px;
-}
-.review_list .review_list_tab {
-    display: flex;
-    justify-content: space-between;
-}
-.review_list .review_list_tab ul {
-    display: flex;
-    justify-content: flex-start;
-}
-.review_list .review_list_tab ul li {
-    height: 44px;
-    line-height: 44px;
-    padding: 0 22px;
-    color: #666;
-    background-color: #eee;
-    border-radius: 30px;
-    margin-left: 6px;
-    margin-bottom: 50px;
-    cursor: pointer;
-}
-.review_list .review_list_tab ul li:first-child {
-    margin-left: 0;
-}
-.review_list .review_list_tab ul li.on {
-    background-color: #57D18F;
-    color: #fff;
-    font-weight: bold;
-}
-.review_list .i_icon {
-    width: 16px;
-    height: 16px;
-    margin-top: 21px;
-}
-.review_list .i_icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer;
-}
-
-.review_list_box {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 30px;
-    display: none;
-}
-.review_list_box.on {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 30px;
-}
-.review_list_box .item {
-    width: calc(100% / 3 - 30px);
-    height: 247px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    background-color: #fff;
-}
-.review_list_box .item .item_header {
-    height: 64px;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    padding-left: 24px;
-}
-.review_list_box .item .item_header > div {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.review_list_box .item .item_header .item_header_user {
-    width: 42px;
-    height: 42px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-right: 8px;
-}
-.review_list_box .item .item_header .name_text {
-    height: 42px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.review_list_box .item .item_header .name_text h2 {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-.review_list_box .item .item_header .name_text > p {
+.cont_inner > p {
     font-size: 12px;
     color: #666;
-}
-.review_list_box .item .item_header .heart {
-    position: absolute;
-    bottom: 10px;
-    right: 32px;
-}
-.review_list_box .item .item_header .heart img {
-    width: 16px;
-    height: 16px;
-    object-fit: cover;
-    margin-right: 2px;
-}
-.review_list_box .item .item_header .heart p {
-    color: red;
-    font-size: 12px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.review_list_box .item .book_itme {
-    padding: 15px 27px 24px 28px;
-    display: flex;
-    justify-content: space-between;
-}
-.review_list_box .item .book_itme #book_title {
-    width: 215px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    
-}
-.review_list_box .item .book_itme #book_title h3 {
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 11px;
-    margin-bottom: 17px;
-}
-.review_list_box .item .book_itme #book_title p {
-    height: 90px;
-    font-size: 13px;
-    color: #666;
-}
-.review_list_box .item .book_itme #book_title > div p {
-    position: relative; 
-    line-height: 1.4; 
-    margin-bottom: 20px;
-    overflow: hidden; 
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    display: -webkit-box; 
-}
-.more-btn {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    color: #aaa;
-    cursor: pointer;
-}
-.show-more .more-btn {
-    display: none;
-}
-
-.review_list_box .item .book_itme .book_img img {
-    width: 104px;
-    height: 144px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-.plus_icon {
-    display: flex;
-    justify-content: center;
-}
-.plus_icon a {
-    width: 177px;
-    height: 60px;
-    background-color: #ddd;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    margin-top: 40px;
-}
-
-
-/* 🤞🤞🤞 직무별 카테고리 🤞🤞🤞 */
-.team_category {
-    margin-top: 70px;
-}
-.team_category > h1 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 8px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.team_category > p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 50px;
+    margin-bottom: 71px;
     margin-left: 34px;
 }
 .category_list {
@@ -527,6 +238,7 @@ button {
     flex-wrap: wrap;
     flex-direction: row;
     gap: 24px;
+    padding-bottom: 240px;
 }
 .category_list .box {
     width: 300px;
@@ -668,7 +380,6 @@ button {
 .category_plus_icon {
     display: flex;
     justify-content: center;
-    padding-bottom: 96px;
 }
 .category_plus_icon a {
     width: 177px;
@@ -680,21 +391,5 @@ button {
     align-items: center;
     font-weight: bold;
     margin-top: 40px;
-}
-
-
-/* 👌👌👌탑버튼 / 글쓰기 버튼👌👌👌 */
-.top_btn {
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    bottom: 75px;
-    right: 120px;
-}
-.writing_icon {
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    bottom: 133px;
-    right: 120px;
+    margin-bottom: 75px;
 }
