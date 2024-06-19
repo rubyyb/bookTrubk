@@ -1,0 +1,267 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Nanum Gothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot);
+    src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+        url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff2) format('woff2'),
+        url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff) format('woff'),
+        url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.ttf) format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+body {
+    color: #1D1D1B;
+    line-height: 1;
+    font-family: 'Nanum Gothic';
+}
+button {
+    background-color: transparent;
+    border: none;
+}
+
+#sign_wrap {
+    width: 100%;
+    display: flex;
+    font-family: 'Nanum Gothic';
+    background-color: #f5f5f7;
+}
+#sign_wrap .sign_up {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sign_wrap .sign_up .close_btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+#sign_wrap .sign_up .sign_up_box {
+    width: 512px;
+    height: 625px;
+    background-color: #f5f5f7;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:  0 auto;
+}
+#sign_wrap .sign_up .sign_up_box h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 64px;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text {
+    width: 400px;
+    margin-top: 60px;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text input {
+    width: 100%;
+    height: 46px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding-left: 24px;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .id_check {
+    position: relative;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .id_check input {
+    padding-right: 92px;
+    margin-bottom: 0;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .id_check button {
+    width: 76px;
+    height: 30px;
+    background-color: #05a694;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    cursor: pointer;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .id_check label {
+    font-size: 10px;
+    color: #aaa;
+    margin-left: 24px;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .password_check {
+    margin-top: 30px;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .password_check input {
+    margin-bottom: 0;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .password_check label {
+    font-size: 10px;
+    color: #aaa;
+    margin-left: 24px;
+    margin-bottom: 16px;
+}
+#password_last {
+    margin-top: 16px;
+}
+#sign_wrap .sign_up .next_btn a {
+    display: block;
+    width: 400px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 10px;
+    border: 2px solid #05a694;
+    color: #05a694;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+/* 🤞🤞🤞로그인🤞🤞🤞 */
+#sign_wrap .login {
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(to right, #05A694,#57D18F);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#sign_wrap .login h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#sign_wrap .login p {
+    font-size: 16px;
+    margin-bottom: 220px;
+    text-align: center;
+    line-height: 1.4;
+}
+#sign_wrap .login button {
+    width: 400px;
+    height: 42px;
+}
+#sign_wrap .login button a {
+    display: block;
+    width: 400px;
+    height: 42px;
+    color: #fff;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    line-height: 42px;
+}
+
+
+/* 👍👍👍회원가입 2번 페이지 👍👍👍 */
+#sign_wrap .sign_up .sign_up_box .sign_up_text .user_name_box input {
+    margin-bottom: 0;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .user_name_box label {
+    margin-left: 24px;
+    font-size: 10px;
+    color: #aaa;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .age_click {
+    margin-top: 16px;
+    position: relative;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .age_click img {
+    width: 18px;
+    height: 18px;
+    object-fit: cover;
+    position: absolute;
+    top: 14px;
+    right: 24px;
+}
+#age_options {
+    width: 400px;
+}
+/* input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+} */
+#sign_wrap .sign_up .sign_up_box .sign_up_text .job {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 8px;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .job label {
+    font-size: 10px;
+    color: #aaa;
+    margin-left: 5px;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .job > div {
+    position: relative;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .job input {
+    width: 49.4%;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .job img {
+    position: absolute;
+    top: 14px;
+    right: 228px;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .company {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 8px;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .company label {
+    font-size: 10px;
+    color: #aaa;
+    margin-left: 5px;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .company .company_name {
+    position: relative;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .company .company_name img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    position: absolute;
+    top: 11px;
+    right: 228px;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .company .company_name input {
+    width: 49.4%;
+    margin-bottom: 0;
+}
+#sign_wrap .sign_up .sign_up_box .sign_up_text .company .company_text {
+    font-size: 10px;
+    color: #aaa;
+    margin-left: 12px;
+}
+#sign_wrap .sign_up .last_sign {
+    font-size: 10px;
+    color: #aaa;
+    margin-top: 6px;
+    margin-left: 12px;
+}
+#sign_wrap .sign_up .last_sign span {
+    color: #666;
+    text-decoration: underline;
+}

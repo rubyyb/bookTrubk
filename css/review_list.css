@@ -400,15 +400,86 @@ button {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 .pagination {
-    margin-top: 20px;
     display: flex;
-    gap: 5px;
+    justify-content: center;
+    padding: 20px 0 120px 0;
 }
-.pagination button {
-    padding: 5px 10px;
-    cursor: pointer;
+
+.pagination a {
+    height: 40px;
+    color: #999999;
+    float: left;
+    padding: 0 12px;
+    text-decoration: none;
+    transition: background-color .3s;
+    margin: 0 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.pagination button.active {
-    background-color: gray;
-    color: white;
+
+.pagination a.active {
+    color: #1D1D1B;
+    font-weight: bold;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+/* 👌👌👌footer👌👌👌 */
+.footer {
+    width: 100%;
+    height: 224px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 336px;
+    border-top: 3px solid #ddd;
+    background-color: #eee;
+}
+.footer .footer_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .footer_logo img {
+    width: 141px;
+    height: 48px;
+    object-fit: cover;
+}
+.footer .footer_right {
+    color: #666;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer .footer_right .footer_icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+.footer .footer_right .footer_icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+.footer .footer_right .text {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+.footer .footer_right .text p {
+    padding: 0 8px;
+    border-right: 1px solid #999;
+}
+.footer .footer_right .text p:last-child {
+    border-right: 0;
+    padding-right: 0;
+}
+.footer .footer_right > p {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
 }

@@ -27,6 +27,92 @@
                 });
                 return false;
             });
+
+            // 리뷰 페이지 관련
+            // var reviews = [/* 리뷰 데이터 */];
+
+            // // 한 페이지당 보여질 리뷰 개수
+            // var itemsPerPage = 3;
+            // // 현재 페이지
+            // let currentPage = 1;
+
+            // // 페이지 로드시 초기 리뷰 표시
+            // displayReviews(currentPage);
+            // // 페이징 번호 생성
+            // renderPagination();
+
+            // // 리뷰 아이템을 표시하는 함수
+            // function displayReviews(page) {
+            //     var reviewListBox = $('.review_list_box');
+            //     reviewListBox.empty(); // 기존의 리뷰 아이템 삭제
+
+            //     // 시작 인덱스와 끝 인덱스 계산
+            //     var startIndex = (page - 1) * itemsPerPage;
+            //     var endIndex = startIndex + itemsPerPage;
+
+            //     // 현재 페이지에 해당하는 리뷰 아이템 추가
+            //     reviews.slice(startIndex, endIndex).forEach(review => {
+            //         var item = $(`
+            //             <div class="item">
+            //                 <!-- 리뷰 아이템 내용 (생략) -->
+            //             </div>
+            //         `);
+            //         reviewListBox.append(item);
+            //     });
+            // }
+
+            // // 페이징 번호를 생성하는 함수
+            // function renderPagination() {
+            //     var paginationContainer = $('.pagination');
+            //     var maxPage = Math.ceil(reviews.length / itemsPerPage);
+
+            //     // 이전 페이지로 이동하는 이벤트 처리
+            //     $('.prev').click(function() {
+            //         if (currentPage > 1) {
+            //             currentPage--;
+            //             displayReviews(currentPage);
+            //             updatePagination();
+            //         }
+            //     });
+
+            //     // 다음 페이지로 이동하는 이벤트 처리
+            //     $('.next').click(function() {
+            //         if (currentPage < maxPage) {
+            //             currentPage++;
+            //             displayReviews(currentPage);
+            //             updatePagination();
+            //         }
+            //     });
+
+            //     // 페이징 번호 클릭 시 해당 페이지로 이동하는 이벤트 처리
+            //     paginationContainer.on('click', '.page-item', function() {
+            //         var page = parseInt($(this).text());
+            //         if (page !== currentPage) {
+            //             currentPage = page;
+            //             displayReviews(currentPage);
+            //             updatePagination();
+            //         }
+            //     });
+
+            //     updatePagination(); // 초기 페이징 번호 생성
+            // }
+
+            // // 페이징 번호 업데이트 함수
+            // function updatePagination() {
+            //     var paginationContainer = $('.pagination');
+            //     var maxPage = Math.ceil(reviews.length / itemsPerPage);
+            //     var pagesElement = paginationContainer.find('.pages');
+            //     pagesElement.empty(); // 기존의 페이지 번호 삭제
+
+            //     // 페이징 번호 생성
+            //     for (let i = 1; i <= maxPage; i++) {
+            //         var pageItem = $(`<span class="page-item">${i}</span>`);
+            //         if (i === currentPage) {
+            //             pageItem.addClass('active');
+            //         }
+            //         pagesElement.append(pageItem);
+            //     }
+            // }
         })
     </script>
 </head>
@@ -1321,8 +1407,46 @@
                         </a>
                     </div><!-- item -->
                 </div><!-- review_list_box -->
+
+                <div class="pagination">
+                    <span class="prev"><img src="img/pagination_left.png" alt=""></span>
+                    <a href="#" data-page="1" class="active">1</a>
+                    <a href="#" data-page="2">2</a>
+                    <a href="#" data-page="3">3</a>
+                    <a href="#" data-page="4">4</a>
+                    <a href="#" data-page="5">5</a>
+                    <a href="#" data-page="6">6</a>
+                    <span class="next"><img src="img/pagination_right.png" alt=""></span>
+                </div><!-- pagination -->
             </div><!-- cont_inner -->
         </div><!-- review_list -->
+
+        <footer class="footer">
+            <div class="footer_logo">
+                <img src="img/footer_logo.png" alt="">
+            </div><!-- footer_logo -->
+
+            <div class="footer_right">
+                <div class="footer_icon">
+                    <img src="img/facebook_icon.png" alt="">
+                    <img src="img/yourtube_icon.png" alt="">
+                </div><!-- footer_icon -->
+
+                <div class="text">
+                    <p>마상소프트</p>
+                    <p>이용약관</p>
+                    <p>개인정보 처리방침</p>
+                </div><!-- text -->
+
+                <div class="text">
+                    <p>마상소프트 부산광역시 해운대구 센텀서로30. 19층</p>
+                    <p>Tel : 070-4991-0570</p>
+                    <p>Fax : +82 51 664 8737</p>
+                </div><!-- text -->
+
+                <p>©Masangsoft. All right reserved.</p>
+            </div><!-- footer_right -->
+        </footer><!-- footer -->
     </div><!-- wrap -->
 </body>
 </html>

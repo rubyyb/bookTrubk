@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/sign_up.css">
+    <!-- <script>
+        function checkDuplicateId() {
+            var id = document.getElementById('id').value;
+            alert('아이디 중복 확인: ' + id);
+            // 중복 확인 로직 추가
+        }
+    </script> -->
+</head>
+<body>
+    <div id="sign_wrap">
+        <div class="sign_up">
+            <img src="img/login_close.png" alt="" class="close_btn">
+
+            <div class="sign_up_box">
+                <h1>회원가입</h1>
+
+                <div class="sign_up_text">
+                    <input type="email" class="input" name="user_email" id="user_emailid" tabindex="1" placeholder="이메일 (필수)" required>
+                    <div class="id_check">
+                        <input type="text" class="input id" name="id" id="id" tabindex="2" placeholder="아이디 (필수)" required>
+                        <button type="button" onclick="checkDuplicateId()">중복확인</button>
+                        <label for="id">6~12자 이내, 영문, 숫자 사용가능</label>
+                    </div><!-- id_check -->
+
+                    <div class="password_check">
+                        <input type="password" class="input pw" name="password" id="password" tabindex="3" placeholder="비밀번호 (필수)">
+                        <label for="password">8자 이상, 문자/숫자/특수기회 사용가능</label>
+                    </div><!-- id_check -->
+                    <input type="password" class="input pw" name="password" id="password_last" tabindex="4" placeholder="비밀번호 확인 (필수)" required>
+                </div><!-- password -->
+
+                <button class="next_btn"><a href="sign_up_next.html">다음</a></button>
+            </div><!-- sign_up -->
+        </div><!-- login_wrap -->
+
+        <div class="login">
+            <h1>안녕하세요, 북트렁크 입니다</h1>
+            <p>서로의 생각을 공유하며 지식을 나눌 수 있는,<br>
+            도서기반 커뮤니티 북트렁크입니다.</p>
+
+            <button>
+                <a href="login.html">로그인</a>
+            </button>
+        </div><!-- sign_up_wrap -->
+    </div><!-- sign_up_wrap -->
+</body>
+</html>

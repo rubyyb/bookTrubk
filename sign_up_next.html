@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/sign_up.css">
+</head>
+<body>
+    <div id="sign_wrap">
+        <div class="sign_up">
+            <img src="img/login_close.png" alt="" class="close_btn">
+
+            <div class="sign_up_box">
+                <h1>회원가입</h1>
+
+                <div class="sign_up_text">
+                    <div class="user_name_box">
+                        <input type="text" class="input" name="user_name" id="user_name" placeholder="이름 (필수)">
+                        <label for="user_name">실명으로 입력</label>
+                    </div><!-- user_name_box -->
+
+                    <div class="age_click">
+                        <input list="age_options" id="myDropdown" name="myDropdown" placeholder="연령대 (필수)">
+                        <img src="img/dropdown_arrow_icon.png" alt="">
+                        <datalist id="age_options">
+                            <option value="10대">
+                            <option value="20대">
+                            <option value="30대">
+                            <option value="40대">
+                            <option value="50대">
+                            <option value="60대">
+                            <option value="70대">
+                        </datalist>
+                    </div><!-- age_click -->
+
+                    <div class="job">
+                        <label for="myDropdown">직업</label>
+                        <div>
+                            <input list="job_options" class="job_Dropdown" id="job_Dropdown" name="job_Dropdown" placeholder="직업군 (필수)">
+                            <img src="img/dropdown_arrow_icon.png" alt="">
+                            <input type="text" id="myjobtext" class="myjobtext" name="myjobtext" placeholder="직무 (직접입력)">
+                        </div>
+                    </div><!-- job -->
+
+                    <div class="company">
+                        <label for="myDropdown">회사</label>
+                        <div class="company_name">
+                            <img src="img/search_icon_sign.png" alt="검색" class="search">
+                            <input type="search" placeholder="회사명 (선택)">
+                            <input list="company_options" id="myDropdown" name="myDropdown" placeholder="직무 (선택)">
+                        </div><!-- company_name -->
+                        <label for="company_text" class="company_text">회사 선택 시, 선택한회사로 가입요청이 전송됩니다.</label>
+                    </div><!-- Company -->
+                </div><!-- sign_up_text -->
+
+                <button class="next_btn"><a href="index.html">회원가입 완료</a></button>
+                <p class="last_sign">회원가입 완료를누르는 것으로 <a href="#"><span>북트렁크의 이용약관</span></a>과 <a href="#"><span>개인정보 처리방침</span></a>에 동의할게요.</p>
+            </div><!-- sign_up -->
+        </div><!-- login_wrap -->
+
+        <div class="login">
+            <h1>안녕하세요, 북트렁크 입니다</h1>
+            <p>서로의 생각을 공유하며 지식을 나눌 수 있는,<br>
+            도서기반 커뮤니티 북트렁크입니다.</p>
+
+            <button>
+                <a href="login.html">로그인</a>
+            </button>
+        </div><!-- sign_up_wrap -->
+    </div><!-- sign_up_wrap -->
+</body>
+</html>

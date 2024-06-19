@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div id="login_wrap">
+        <div class="sign_up">
+            <h1>안녕하세요, 북트렁크 입니다</h1>
+            <p>서로의 생각을 공유하며 지식을 나눌 수 있는,<br>
+            도서기반 커뮤니티 북트렁크입니다.</p>
+
+            <button>
+                <a href="sign_up.html">회원가입</a>
+            </button>
+        </div><!-- sign_up -->
+
+        <div class="login">
+            <img src="img/login_close.png" alt="" class="close_btn">
+
+            <div class="login_box">
+                <h1>로그인</h1>
+
+                <button class="goolge_login"><img src="img/google_icon.png" alt=""></button>
+
+                <p class="login_text">일반 로그인</p>
+
+                <div class="password">
+                    <input type="text" class="input" name="user_id" id="user_id" tabindex="1" placeholder="아이디">
+                    <input type="password" class="input pw" name="password" id="password" tabindex="2" placeholder="비밀번호">
+                </div><!-- password -->
+
+                <div class="login_click">
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="check_login" id="check_login" fw-label="로그인 유지">
+                            <label for="check_login">로그인 유지</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="check_id" id="check_id" fw-label="아이디저장">
+                            <label for="check_id">아이디 저장</label>
+                        </li>
+                    </ul>
+                </div><!-- login_click -->
+
+                <button class="login_finish"><a href="index.html">로그인</a></button>
+
+                <div class="password_find">
+                    <p>아이디 찾기</p>
+                    <p>비밀번호 찾기</p>
+                </div><!-- password_fint -->
+            </div><!-- login_box -->
+        </div><!-- login -->
+    </div><!-- login_wrap -->
+</body>
+</html>
