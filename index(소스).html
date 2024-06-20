@@ -1,0 +1,41 @@
+<!doctype html> 
+<html> 
+<head> 
+	<title></title> 
+	<style>
+	/*크롬, 사파리 등에서만 보이고 익스플로러에선 작동하지 않습니다!*/
+		* {margin:0; padding:0;}
+		@keyframes clouds-moving{
+			0%{background-position:50% center};
+			50%{background-position:left center};
+			100%{background-position:50% center};
+		}/*배경이미지 애니메이션부분*/
+	p {
+		font-family:"Arial";
+		-webkit-background-clip: text;/*글씨 부분에서만 배경이 움직이게 지정.*/
+		-webkit-text-fill-color: transparent;/*글씨를 투명하게 색상 지정.*/
+		background-image: url('img/main_004.jpg');/*뒤에서 움직일 배경 이미지. 큰것필수!*/
+		background-size: auto;
+		background-attachment: unset;
+		background-position: 0%;
+		width: 89%;
+		height: auto;
+		margin: 0 110px;
+		line-height: 1em;
+		letter-spacing: -0.001em;
+		font-size: 134px;
+		-webkit-animation: clouds-moving infinite 220s;
+		animation-fill-mode: forwards;
+		animation-play-state: running;
+		animation-timing-function: linear;
+		text-align: left;
+		word-spacing: -0.1em;
+		font-weight: 700;
+	}
+	</style>
+</head>
+<body> 
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+</body>
+</html>

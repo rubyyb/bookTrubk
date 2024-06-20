@@ -178,7 +178,7 @@ button {
     width: 55px;
     height: 55px;
     object-fit: cover;
-    border: 2px solid #19b193;
+    border: 2px solid #ccc;
     border-radius: 10px;
 }
 .sticky {

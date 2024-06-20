@@ -42,12 +42,27 @@ button {
 #login_wrap .sign_up {
     width: 50%;
     height: 100vh;
-    background: linear-gradient(to right, #05A694,#57D18F);
+    background: linear-gradient(-45deg, #05A694, #57D18F);
+    background-repeat: no-repeat;
+    background-size: 400% 400%;
+    animation: sign_up 20s ease-in-out infinite;
+    position: relative;
     color: #fff;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+@keyframes sign_up {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
 }
 #login_wrap .sign_up h1 {
     font-size: 36px;
