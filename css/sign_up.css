@@ -99,7 +99,7 @@ button {
     cursor: pointer;
 }
 #sign_wrap .sign_up .sign_up_box .sign_up_text .id_check label {
-    font-size: 10px;
+    font-size: 11px;
     color: #aaa;
     margin-left: 24px;
 }
@@ -110,7 +110,7 @@ button {
     margin-bottom: 0;
 }
 #sign_wrap .sign_up .sign_up_box .sign_up_text .password_check label {
-    font-size: 10px;
+    font-size: 11px;
     color: #aaa;
     margin-left: 24px;
     margin-bottom: 16px;
@@ -176,10 +176,10 @@ button {
 }
 #sign_wrap .sign_up .sign_up_box .sign_up_text .user_name_box label {
     margin-left: 24px;
-    font-size: 10px;
+    font-size: 11px;
     color: #aaa;
 }
-#sign_wrap .sign_up .sign_up_box .sign_up_text .age_click {
+/* #sign_wrap .sign_up .sign_up_box .sign_up_text .age_click {
     margin-top: 16px;
     position: relative;
 }
@@ -190,53 +190,181 @@ button {
     position: absolute;
     top: 14px;
     right: 24px;
-}
-#age_options {
-    width: 400px;
-}
-/* input::-webkit-calendar-picker-indicator {
-    display: none;
-}
-input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
 } */
-#sign_wrap .sign_up .sign_up_box .sign_up_text .job {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 8px;
-}
-#sign_wrap .sign_up .sign_up_box .sign_up_text .job label {
-    font-size: 10px;
+::-webkit-input-placeholder { /* Chrome, Safari, Edge, Opera */
     color: #aaa;
-    margin-left: 5px;
+    font-size: 12px;
+    /* font-style: italic; */
 }
-#sign_wrap .sign_up .sign_up_box .sign_up_text .job > div {
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #aaa;
+    font-size: 12px;
+    /* font-style: italic; */
+}
+
+::placeholder {
+    color: #aaa;
+    font-size: 12px;
+    /* font-style: italic; */
+}
+.age_click {
     position: relative;
+    width: 400px;
+    height: 42px;
+    margin: 16px auto;
 }
-#sign_wrap .sign_up .sign_up_box .sign_up_text .job input {
-    width: 49.4%;
+.age_custom_select {
+    display: inline-block;
+    width: 400px;
+    height: 42px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    outline: 0px;
+    border-radius: 10px;
 }
-#sign_wrap .sign_up .sign_up_box .sign_up_text .job img {
+.select-origin {
     position: absolute;
-    top: 14px;
-    right: 228px;
+    right: 10px;
 }
+.age_custom_select_text {
+    color: #aaa;
+    position: absolute;
+    top: 12px;
+    left: 24px;
+}
+.age_custom_select_arrow {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+}
+.age_custom_select_list {
+    position: absolute;
+    font-size: 16px;
+    width: 400px;
+    height: 201px;
+    z-index: 15;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    text-align: left;
+    margin-top: -3px;
+    border-radius: 10px;
+    padding-left: 8px;
+}
+.age_custom_select_option {
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    padding-left: 16px;
+}
+.age_custom_select_option:hover {
+    width: 384px;
+    height: 38px;
+    color: #ffffff;
+    background-color: #79DAA5;
+    border-radius: 10px;
+}
+
+.job {
+    position: relative;
+    width: 400px;
+    height: 62px;
+    margin: 16px auto;
+}
+.job label {
+    font-size: 12px;
+    font-weight: bold;
+}
+.job_custom {
+    margin-top: 4px;
+}
+.job_custom_select {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    height: 42px;
+    border: solid 1px #ddd;
+    background-color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    outline: 0px;
+    border-radius: 10px;
+}
+.select-origin {
+    position: absolute;
+    right: 10px;
+}
+.job_custom_select_text {
+    color: #aaa;
+    position: absolute;
+    top: 12px;
+    left: 24px;
+}
+.job_custom_select_arrow {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+}
+.job_custom_select_list {
+    position: absolute;
+    font-size: 14px;
+    width: 49%;
+    max-height: 200px; /* 최대 높이 지정 */
+    overflow-y: auto;
+    height: 850px;
+    z-index: 15;
+    border: solid 1px #ddd;
+    background-color: #ffffff;
+    text-align: left;
+    margin-top: -3px;
+    border-radius: 10px;
+    padding-left: 2px;
+}
+.job_custom_select_option {
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    padding-left: 14px;
+}
+.job_custom_select_option:hover {
+    width: 98%;
+    height: 38px;
+    color: #ffffff;
+    background-color: #79DAA5;
+    border-radius: 10px;
+}
+.job .job_custom .myjobtext {
+    width: 49% !important;
+    height: 42px !important;
+    background-color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    outline: 0px;
+    margin-bottom: 5px !important;
+}
+
+
+
 #sign_wrap .sign_up .sign_up_box .sign_up_text .company {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    gap: 8px;
 }
 #sign_wrap .sign_up .sign_up_box .sign_up_text .company label {
-    font-size: 10px;
-    color: #aaa;
+    font-size: 12px;
     margin-left: 5px;
+    font-weight: bold;
 }
 #sign_wrap .sign_up .sign_up_box .sign_up_text .company .company_name {
     position: relative;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 #sign_wrap .sign_up .sign_up_box .sign_up_text .company .company_name img {
     width: 24px;
@@ -245,15 +373,17 @@ input::-webkit-outer-spin-button {
     position: absolute;
     top: 11px;
     right: 228px;
+    cursor: pointer;
 }
 #sign_wrap .sign_up .sign_up_box .sign_up_text .company .company_name input {
     width: 49.4%;
     margin-bottom: 0;
 }
 #sign_wrap .sign_up .sign_up_box .sign_up_text .company .company_text {
-    font-size: 10px;
+    font-size: 11px;
     color: #aaa;
     margin-left: 12px;
+    font-weight: normal !important;
 }
 #sign_wrap .sign_up .last_sign {
     font-size: 10px;

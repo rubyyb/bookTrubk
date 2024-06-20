@@ -4,8 +4,278 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>연습</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    let selectFlag;
+    $(document).ready(function() {
+      $('.age_custom_select').on('click', function() {
+        $(this).toggleClass('selected');
+        if($(this).hasClass('selected')) {
+          $('.age_custom_select_list').show();
+        } else {
+          $('.age_custom_select_list').hide();
+        }
+      })
+
+      $('.age_custom_select').on('focusin', function() {
+        $('.age_custom_select_list').show();
+      });
+
+      $('.age_custom_select').on('focusout', function() {
+        if(!selectFlag) {
+          $('.age_custom_select_list').hide();
+        }
+        $(this).removeClass('selected');
+      });
+
+      $('.age_custom_select_option').on('mouseenter', function() {
+        selectFlag = true;
+      });
+
+      $('.age_custom_select_option').on('mouseout', function() {
+        selectFlag = false;
+      });
+
+      $('.age_custom_select_option').on('click', function() {
+        let value = $(this).attr('value');
+
+        $('.age_custom_select_text').text($(this).text());
+        $('.select-origin').val(value);
+        $('.age_custom_select_list').hide();
+
+        $('.select-origin').find('option').each(function(index, el) {
+          if($(el).attr('value') == value) {
+            $(el).attr('selected', 'selected');
+          } else {
+            $(el).removeAttr('selected');
+          }
+        });
+      });
+
+      $('.job_custom_select').on('click', function() {
+        $(this).toggleClass('selected');
+        if($(this).hasClass('selected')) {
+          $('.job_custom_select_list').show();
+        } else {
+          $('.job_custom_select_list').hide();
+        }
+      })
+
+      $('.job_custom_select').on('focusin', function() {
+        $('.job_custom_select_list').show();
+      });
+
+      $('.job_custom_select').on('focusout', function() {
+        if(!selectFlag) {
+          $('.job_custom_select_list').hide();
+        }
+        $(this).removeClass('selected');
+      });
+
+      $('.job_custom_select_option').on('mouseenter', function() {
+        selectFlag = true;
+      });
+
+      $('.job_custom_select_option').on('mouseout', function() {
+        selectFlag = false;
+      });
+
+      $('.job_custom_select_option').on('click', function() {
+        let value = $(this).attr('value');
+
+        $('.job_custom_select_text').text($(this).text());
+        $('.select-origin').val(value);
+        $('.job_custom_select_list').hide();
+
+        $('.select-origin').find('option').each(function(index, el) {
+          if($(el).attr('value') == value) {
+            $(el).attr('selected', 'selected');
+          } else {
+            $(el).removeAttr('selected');
+          }
+        });
+      });
+    })
+  </script>
+  <style>
+    li {
+        list-style: none;
+    }
+
+    .age_click {
+      position: relative;
+      width: 400px;
+      height: 150px;
+      margin: 50px auto;
+    }
+
+    .age_custom_select {
+      display: inline-block;
+      width: 400px;
+      height: 42px;
+      border: solid 1px #c4ccd8;
+      background-color: #ffffff;
+      box-sizing: border-box;
+      font-size: 12px;
+      cursor: pointer;
+      position: relative;
+      outline: 0px;
+      border-radius: 10px;
+    }
+
+    .select-origin {
+      position: absolute;
+      right: 10px;
+    }
+
+    .age_custom_select_text {
+      position: absolute;
+      top: 12px;
+      left: 24px;
+    }
+
+    .age_custom_select_arrow {
+      position: absolute;
+      top: 12px;
+      right: 15px;
+    }
+
+    .age_custom_select_list {
+      position: absolute;
+      font-size: 16px;
+      width: 400px;
+      height: 200px;
+      z-index: 15;
+      border: solid 1px #c4ccd8;
+      background-color: #ffffff;
+      text-align: left;
+      margin-top: -3px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding-left: 8px;
+    }
+
+    .age_custom_select_option {
+      height: 40px;
+      line-height: 40px;
+      cursor: pointer;
+      box-sizing: border-box;
+      padding-left: 16px;
+    }
+
+    .age_custom_select_option:hover {
+      width: 384px;
+      height: 38px;
+      color: #ffffff;
+      background-color: #79DAA5;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+    .job {
+      position: relative;
+      width: 400px;
+      height: 150px;
+      margin: 50px auto;
+    }
+
+    .job_custom_select {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .job_custom_select_text {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+    .job_custom_select_arrow {
+        width: 10px;
+        height: 10px;
+        vertical-align: middle;
+    }
+
+    .job_custom_select_list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-height: 200px; /* 최대 높이 지정 */
+        overflow-y: auto; /* 세로 스크롤바 추가 */
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        background-color: #fff;
+        z-index: 1000;
+        display: none;
+    }
+
+    .job_custom_select_list.open {
+        display: block;
+    }
+
+    .job_custom_select_option {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .job_custom_select_option:hover {
+        background-color: #f0f0f0;
+    }
+
+    .myjobtext {
+        display: inline-block;
+        vertical-align: top;
+        width: 200px;
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+  </style>
 </head>
 <body>
-  
+  <div class="job">
+    <label for="myDropdown">직업</label>
+    <div>
+        <div class="job_custom_select" tabindex="0">
+            <span class="job_custom_select_text">연령대 (필수)</span>
+            <img src="img/dropdown_arrow_icon.png" class="job_custom_select_arrow">
+        </div><!-- age_custom_select -->
+        <ul class="job_custom_select_list" style="display:none;">
+            <li value="selectOption1" class="job_custom_select_option">기획&bull; 전략</li>
+            <li value="selectOption1" class="job_custom_select_option">마케팅 &bull; 홍보 &bull; 조사</li>
+            <li value="selectOption1" class="job_custom_select_option">회계 &bull; 세무 &bull; 제무</li>
+            <li value="selectOption1" class="job_custom_select_option">인사 &bull; 노무 &bull; HRD</li>
+            <li value="selectOption1" class="job_custom_select_option">IT개발 &bull; 데이터</li>
+            <li value="selectOption1" class="job_custom_select_option">디자인</li>
+            <li value="selectOption1" class="job_custom_select_option">영업 &bull; 판매 &bull; 무역</li>
+            <li value="selectOption1" class="job_custom_select_option">고객상담 &bull; TM</li>
+            <li value="selectOption1" class="job_custom_select_option"> 구매 &bull; 자재 &bull; 물류</li>
+            <li value="selectOption1" class="job_custom_select_option">상품기획 &bull; MD</li>
+            <li value="selectOption1" class="job_custom_select_option">운전 &bull; 운송 &bull; 배송</li>
+            <li value="selectOption1" class="job_custom_select_option">서비스</li>
+            <li value="selectOption1" class="job_custom_select_option">생산</li>
+            <li value="selectOption1" class="job_custom_select_option">건설 &bull; 건축</li>
+            <li value="selectOption1" class="job_custom_select_option">의료</li>
+            <li value="selectOption1" class="job_custom_select_option">연구 &bull; R&D</li>
+            <li value="selectOption1" class="job_custom_select_option">교육</li>
+            <li value="selectOption1" class="job_custom_select_option">미디어 &bull; 문화 &bull; 스포츠</li>
+            <li value="selectOption1" class="job_custom_select_option">금융 &bull; 보험</li>
+            <li value="selectOption1" class="job_custom_select_option">공공 &bull; 복지</li>
+            <li value="selectOption1" class="job_custom_select_option">기타</li>
+        </ul><!-- age_custom_select_list -->
+        <input type="text" id="myjobtext" class="myjobtext" name="myjobtext" placeholder="직무 (직접입력)">
+    </div>
+</div><!-- job -->
 </body>
 </html>
